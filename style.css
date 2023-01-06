@@ -51,7 +51,7 @@ nav {
 }
 
 div#sticky-nav a {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
     display: inline-block;
     width: 100%;
@@ -65,4 +65,44 @@ div#sticky-nav a {
 div#sticky-nav a:hover {
     background-color: rgb(50, 250, 200);
     color: rgb(0, 0, 0);
+}
+
+/* main content style sector */
+main {
+    padding: var(--px1);
+    margin: auto;
+    
+}
+
+.heading-card {
+    font-family: 'lucon', Arial, Helvetica, sans-serif;
+    padding: 3px 6px;
+}
+
+.image-card {
+    width: 90px;
+    height: 90px;
+    border-radius: 25%;
+    margin: var(--px2);
+    box-shadow: 0 0 10px pink;
+}
+
+.text-card {
+    padding: var(--px2);    
+    text-align: justify;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.card {
+    padding: var(--px0);
+    margin: auto;
+    margin-top: 2.5rem;
+    border-radius: var(--px1);
+    background-color: rgb(208, 253, 255);
+    box-shadow: 3px 4px 5px #008b8b80;
 }
