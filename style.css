@@ -1,0 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+main {
+    width: min(800px, calc(70% + 100px));
+}
