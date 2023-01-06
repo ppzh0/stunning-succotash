@@ -1,9 +1,58 @@
+@font-face {
+    font-family: 'lucon';
+    src: url(fonts/lucon.woff2);
+}
+
+@font-face {
+    font-family: 'cnr';
+    src: url(fonts/ComicNeue-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'SourceCodePro';
+    src: url(fonts/SourceCodePro-Regular.woff2);
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+:root {
+    --px0: 2px;
+    --px1: 4px;
+    --px2: 8px;
+
+}
+
+body {
+    height: calc(400px * 32);
+}
+
 main {
     width: min(800px, calc(70% + 100px));
+}
+
+/* nav stlye sector */
+#sticky-nav {
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding-inline-start: 0;
+}
+
+ul#sticky-nav li {
+    list-style: none;
+}
+
+ul#sticky-nav li a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    padding: var(--px2);
+    border: 1px solid green;
+    border-radius: var(--px1);
 }
