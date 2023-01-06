@@ -28,6 +28,7 @@
 
 body {
     height: calc(400px * 32);
+    margin: 0;
 }
 
 main {
@@ -35,24 +36,33 @@ main {
 }
 
 /* nav stlye sector */
-#sticky-nav {
-    list-style: none;
+nav {
     position: fixed;
     width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.0923);
+}
+
+#sticky-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
     padding-inline-start: 0;
+    text-align: center;
 }
 
-ul#sticky-nav li {
-    list-style: none;
-}
-
-ul#sticky-nav li a {
+div#sticky-nav a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
-    padding: var(--px2);
-    border: 1px solid green;
-    border-radius: var(--px1);
+    display: inline-block;
+    width: 100%;
+    padding:16px;
+    border-left: 1px solid teal;
+    border-right: 1px solid teal;
+    color: teal;
+    transition: background-color .3s, color 1s ease;
+}
+
+div#sticky-nav a:hover {
+    background-color: rgb(50, 250, 200);
+    color: rgb(0, 0, 0);
 }
