@@ -56,7 +56,7 @@ nav {
 
 #sticky-nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     text-align: center;
 }
 
@@ -117,7 +117,7 @@ main {
     list-style: none;
     font-family: 'cnr';
     font-weight: 600;
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 
 
@@ -128,13 +128,13 @@ main {
 /* card structure and style */
 .card {
     padding: var(--px0);
-    margin: auto;
+    /* margin: auto; !Remove this! */
     margin-top: 2.5rem;
     /* additional styles */
-    border-radius: var(--px2);
-    background-color: #d0fdff;
-    /* box-shadow: 3px 4px 5px #008b8b80; */
-    box-shadow: #0000001a 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
+    /* border-radius: var(--px2); */
+    background-color: #00fff250;
+    box-shadow: 0px 10px 10px 4px #90ffe762;
+    /* box-shadow: #0000001a 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px; */
 }
 
 /* wraps button to form a full-width click on anchor tags */
@@ -142,13 +142,12 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-top: 1px solid #000;
-
 }
 
 .btn {
     /* text styles */
     text-align: center;
-    font-family: 'SourceCodePro', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'lucida console', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
     font-size: 1.4rem;
     text-decoration: none;
