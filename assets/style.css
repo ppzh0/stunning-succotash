@@ -63,6 +63,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    /* transition: all 1.6s ease; */
 }
 
 body {
@@ -75,6 +76,11 @@ body {
 
 main {
     padding-top: 1.5rem;
+}
+
+*::selection {
+    background-color: #b2dae6;
+    color: #7c5361;
 }
 
 /* nav styles */
@@ -97,6 +103,10 @@ nav {
     backdrop-filter: blur(2px);
 }
 
+a {
+    color: #fff;
+}
+
 a.nav-link {
     border-left: 1px solid cyan;
     border-right: 1px solid cyan;
@@ -117,6 +127,7 @@ a.nav-link:hover {
 .card {
     border-radius: var(--px);
     margin-top: 3rem;
+    color: #fff;
     transition: all .3s ease-out;
 }
 
@@ -150,7 +161,18 @@ a.nav-link:hover {
 .cardP {
     /* default display */
     width: calc(85px + 3vw);
+    box-shadow: 0 0 8px 3px #fff;
     border-radius: var(--px);
+}
+
+body {
+    background: url(img/huh.jpg);
+}
+
+.bg-img {
+    background: url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* buttons */
@@ -168,7 +190,6 @@ a.nav-link:hover {
     /* text stuff */
     text-align: center;
     text-decoration: none;
-    color: #000;
     font-weight: bold;
     /* animation stuff */
     transition: all .3s ease;
