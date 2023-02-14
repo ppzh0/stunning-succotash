@@ -71,13 +71,13 @@ body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 6px;
-    background: url(img/huh.jpg);
+    background: url(img/bg/huh.jpg);
 }
 
 main {
     padding-top: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1rem 3rem;
 }
 
@@ -148,7 +148,7 @@ a.nav-link:hover {
     /* display stuff */
     display: grid;
     /* makes the image and info aligned center */
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
     margin: 0 .6rem;
@@ -170,11 +170,11 @@ a.nav-link:hover {
 
 /* background image works */
 .bg-img {
-    background: url(img/bg.webp) no-repeat;
+    background: url(img/bg/bg.gif) no-repeat;
 }
 
 .explicit {
-    background: url(img/wut.jpg) no-repeat;
+    background: url(img/bg/wut.jpg) no-repeat;
 }
 
 .explicit:hover {
@@ -183,7 +183,7 @@ a.nav-link:hover {
 }
 
 .soft {
-    background: url(img/hmm-soft.jpg) no-repeat;
+    background: url(img/bg/hmm-soft.jpg) no-repeat;
 }
 
 .soft:hover {
@@ -192,7 +192,7 @@ a.nav-link:hover {
 }
 
 .sad {
-    background: url(img/hmm-sad.jpg) no-repeat;
+    background: url(img/bg/hmm-sad.jpg) no-repeat;
 }
 
 .sad:hover {
