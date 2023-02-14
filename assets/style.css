@@ -71,11 +71,14 @@ body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 6px;
-    width: min(380px, calc(70% + 100px));
+    background: url(img/huh.jpg);
 }
 
 main {
     padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1rem 3rem;
 }
 
 *::selection {
@@ -161,18 +164,45 @@ a.nav-link:hover {
 .cardP {
     /* default display */
     width: calc(85px + 3vw);
-    box-shadow: 0 0 8px 3px #fff;
+    box-shadow: 0 0 20px 0 rgb(255 255 255 / 30%);
     border-radius: var(--px);
 }
 
-body {
-    background: url(img/huh.jpg);
+/* background image works */
+.bg-img {
+    background: url(img/bg.webp) no-repeat;
 }
 
-.bg-img {
-    background: url(img/bg.jpg) no-repeat;
+.explicit {
+    background: url(img/wut.jpg) no-repeat;
+}
+
+.explicit:hover {
+    box-shadow: 0 0 34px 0 #ff0000;
+
+}
+
+.soft {
+    background: url(img/hmm-soft.jpg) no-repeat;
+}
+
+.soft:hover {
+    box-shadow: -4px 7px 20px 0 #5aaad84d, 2px 0 20px 0 #59dfbd4d;
+
+}
+
+.sad {
+    background: url(img/hmm-sad.jpg) no-repeat;
+}
+
+.sad:hover {
+    box-shadow: -4px 7px 20px 0 #ecd136ab, 2px 0 20px 0 #e23a3aab;
+
+}
+
+.bg {
     background-size: cover;
-    background-position: center;
+    background-position: center;    
 }
 
 /* buttons */
