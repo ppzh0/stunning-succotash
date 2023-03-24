@@ -3,16 +3,21 @@
 ## HTML
 ```html
 <article class="card">
-    <h2 class="cardH">Title</h2>
-    <div class="content-wrapper">
-        <img src="assets/img/*" alt="" class="cardP">
-        <ul class="cardI">
-            <li>Artist</li>
-            <li>Genre</li>
-            <li>Type</li>
-        </ul>
+    <h2 class="header">The Best For You</h2>
+    <div class="wraps">
+        <img src="assets/img/the-best-for-you.jpg" alt="" class="img">
+        <div class="cardI">
+            <fieldset>
+                <legend>Artist<legend>
+                Hikaru Station, Redza
+            </fieldset>
+            <fieldset>
+                <legend>Album</legend>
+                The Best For You
+            </fieldset>
+        </div>
     </div>
-    <div class="btn-wrapper">
+    <div class="wrapsBTN">
         <a href="" class="btn youtube">YouTube</a>
         <a href="" class="btn spotify">Spotify</a>
     </div>
@@ -21,7 +26,7 @@
 ## CSS
 ```css
 .card {
-    border-radius: var(--px);
+    border-radius: var(--dP);
     margin-top: 3rem;
     transition: all .3s ease-out;
 }
@@ -30,37 +35,41 @@
     box-shadow: -4px 7px 20px 0 rgb(0 0 0 / 30%), 2px 0 20px 0 rgb(0 0 0 / 30%);
 }
 
-.cardH {
+.header {
     padding: 1rem .3rem 0;
     /* text stuff */
     text-align: center;
 }
 
-.content-wrapper {
+.cardI {
+    width: 90%;
+    text-align: right;
+    padding: 0.4rem;
+}
+
+.wraps {
     /* display stuff */
     display: grid;
     /* makes the image and info aligned center */
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-items: center;
-    margin: 0 .6rem;
-    word-break: break-all;
-    text-align: end;
 }
 
-.content-wrapper ul {
+.wraps ul {
     list-style: none;
     padding-inline-start: 0;
 }
 
-.cardP {
+.img {
     /* default display */
-    width: calc(85px + 3vw);
-    border-radius: var(--px);
+    width: calc(100px + 3vw);
+    border-radius: calc(var(--dP) / 2);
+    padding-left: .8rem;
 }
 
 /* buttons */
-.btn-wrapper {
+.wrapsBTN {
     /* display stuff */
     /* makes buttons aligned center */
     display: grid;
@@ -83,7 +92,7 @@
 /* button styles */
 .spotify {
     font-family: Gotham;
-    border-bottom-right-radius: var(--px);
+    border-bottom-right-radius: var(--dP);
 }
 
 .spotify:hover {
@@ -93,7 +102,8 @@
 
 .youtube {
     font-family: "YouTubeSans";
-    border-bottom-left-radius: var(--px);
+    font-weight: bolder;
+    border-bottom-left-radius: var(--dP);
 }
 
 .youtube:hover {
