@@ -56,14 +56,13 @@
 }
 
 :root {
-    --px: 8px;
+    --dP: 8px;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    /* transition: all 1.6s ease; */
 }
 
 body {
@@ -71,19 +70,11 @@ body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 6px;
-    background: url(img/bg/huh.jpg);
+    width: min(330px, calc(70% + 100px));
 }
 
 main {
     padding-top: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1rem 3rem;
-}
-
-*::selection {
-    background-color: #b2dae6;
-    color: #7c5361;
 }
 
 /* nav styles */
@@ -106,11 +97,7 @@ nav {
     backdrop-filter: blur(2px);
 }
 
-a {
-    color: #fff;
-}
-
-a.nav-link {
+a.nLink {
     border-left: 1px solid cyan;
     border-right: 1px solid cyan;
     padding: min(16px, calc(1vw + 2px));
@@ -121,16 +108,16 @@ a.nav-link {
     transition: all .3s ease-in-out;
 }
 
-a.nav-link:hover {
+a.nLink:hover {
     color: #fff;
     background-color: rgba(97, 97, 97, 0.5);
 }
 
+
 /* card style */
 .card {
-    border-radius: var(--px);
+    border-radius: var(--dP);
     margin-top: 3rem;
-    color: #fff;
     transition: all .3s ease-out;
 }
 
@@ -138,75 +125,41 @@ a.nav-link:hover {
     box-shadow: -4px 7px 20px 0 rgb(0 0 0 / 30%), 2px 0 20px 0 rgb(0 0 0 / 30%);
 }
 
-.cardH {
+.header {
     padding: 1rem .3rem 0;
     /* text stuff */
     text-align: center;
 }
 
-.content-wrapper {
+.cardI {
+    width: 90%;
+    text-align: right;
+    padding: 0.4rem;
+}
+
+.wraps {
     /* display stuff */
     display: grid;
     /* makes the image and info aligned center */
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-items: center;
-    margin: 0 .6rem;
-    word-break: break-all;
-    text-align: end;
 }
 
-.content-wrapper ul {
+.wraps ul {
     list-style: none;
     padding-inline-start: 0;
 }
 
-.cardP {
+.img {
     /* default display */
-    width: calc(85px + 3vw);
-    box-shadow: 0 0 20px 0 rgb(255 255 255 / 30%);
-    border-radius: var(--px);
-}
-
-/* background image works */
-.bg-img {
-    background: url(img/bg/bg.jpg) no-repeat;
-}
-
-.explicit {
-    background: url(img/bg/wut.jpg) no-repeat;
-}
-
-.explicit:hover {
-    box-shadow: 0 0 34px 0 #ff0000;
-
-}
-
-.soft {
-    background: url(img/bg/hmm-soft.jpg) no-repeat;
-}
-
-.soft:hover {
-    box-shadow: -4px 7px 20px 0 #5aaad84d, 2px 0 20px 0 #59dfbd4d;
-
-}
-
-.sad {
-    background: url(img/bg/hmm-sad.jpg) no-repeat;
-}
-
-.sad:hover {
-    box-shadow: -4px 7px 20px 0 #ecd136ab, 2px 0 20px 0 #e23a3aab;
-
-}
-
-.bg {
-    background-size: cover;
-    background-position: center;    
+    width: calc(100px + 3vw);
+    border-radius: calc(var(--dP) / 2);
+    padding-left: .8rem;
 }
 
 /* buttons */
-.btn-wrapper {
+.wrapsBTN {
     /* display stuff */
     /* makes buttons aligned center */
     display: grid;
@@ -220,6 +173,7 @@ a.nav-link:hover {
     /* text stuff */
     text-align: center;
     text-decoration: none;
+    color: #000;
     font-weight: bold;
     /* animation stuff */
     transition: all .3s ease;
@@ -228,7 +182,7 @@ a.nav-link:hover {
 /* button styles */
 .spotify {
     font-family: Gotham;
-    border-bottom-right-radius: var(--px);
+    border-bottom-right-radius: var(--dP);
 }
 
 .spotify:hover {
@@ -238,10 +192,23 @@ a.nav-link:hover {
 
 .youtube {
     font-family: "YouTubeSans";
-    border-bottom-left-radius: var(--px);
+    font-weight: bolder;
+    border-bottom-left-radius: var(--dP);
 }
 
 .youtube:hover {
     background-color: #FF0000;
     color: #282828;
+}
+
+@media screen and (min-width: 546.5px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        gap: 2rem 3rem;
+    }
 }
