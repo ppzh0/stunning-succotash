@@ -125,6 +125,21 @@ a.nLink:hover {
     transition: all .3s ease-out;
 }
 
+/* for the info card in 404 page */
+.fC500 {
+    width: min(400px, calc(100% + 1vw));
+    text-align: center;
+}
+
+#info-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: auto;
+}
+
 .card:hover {
     box-shadow: -4px 7px 20px 0 rgb(0 0 0 / 30%), 2px 0 20px 0 rgb(0 0 0 / 30%);
 }
@@ -137,9 +152,13 @@ a.nLink:hover {
 
 .cardI {
     width: 90%;
-    text-align: right;
     padding: 0.4rem;
     font-weight: bold;
+    text-align: center;
+}
+
+.cardI:not(p) {
+    text-align: right;
 }
 
 .wraps {
@@ -185,9 +204,13 @@ a.nLink:hover {
 }
 
 /* button styles */
+.discord,
+.spotify {
+    border-bottom-right-radius: var(--dP);
+}
+
 .spotify {
     font-family: Gotham;
-    border-bottom-right-radius: var(--dP);
 }
 
 .spotify:hover {
@@ -195,15 +218,29 @@ a.nLink:hover {
     color: #1DB954;
 }
 
+.discord:hover {
+    background-color: #5865F2;
+    color: #000;
+}
+
+.github,
+.youtube {
+    border-bottom-left-radius: var(--dP);
+}
+
 .youtube {
     font-family: "YouTubeSans";
     font-weight: bolder;
-    border-bottom-left-radius: var(--dP);
 }
 
 .youtube:hover {
     background-color: #FF0000;
     color: #282828;
+}
+
+.github:hover {
+    background-color: #282828;
+    color: #fff;
 }
 
 @media screen and (min-width: 546.5px) {
