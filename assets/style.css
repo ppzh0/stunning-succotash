@@ -67,7 +67,7 @@
 
 body {
     height: calc(400px * 32);
-    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-family: 'cnr', Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 6px;
     width: min(330px, calc(70% + 100px));
@@ -139,6 +139,7 @@ a.nLink:hover {
     width: 90%;
     text-align: right;
     padding: 0.4rem;
+    font-weight: bold;
 }
 
 .wraps {
