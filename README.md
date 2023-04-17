@@ -2,7 +2,7 @@
 This repository is about digital audio; music, info which is collected not by me.
 
 ## Contribution
-> This *repository* won't have much *contribution* due to my **school stuffs** and also I need breaks...
+Wants to check what's need to improve? check it out [here](https://dcox.vercel.app/)
 
 ## Contact Me
 
